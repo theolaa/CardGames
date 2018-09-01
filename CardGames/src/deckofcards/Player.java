@@ -7,6 +7,11 @@ public class Player {
 	private ArrayList<Card> hand = new ArrayList<Card>();
 	
 	private int score;
+	private String name;
+	
+	public Player(String n) {
+		name = n;
+	}
 	
 	public void drawCard(Card card) {
 		hand.add(card);
@@ -31,6 +36,14 @@ public class Player {
 		}
 		for (Card temp : hand)
 			System.out.println(temp.getCardName());
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public int getScore() {
+		return this.score;
 	}
 	
 }
