@@ -29,5 +29,22 @@ public abstract class CardGame {
 		return tempCards;
 
 	}
+	
+	public void displayGameState(Deck deck, ArrayList<Player> players) {
+		
+		for (Player temp : players) {
+			System.out.println(temp.getName());
+			temp.displayHand();
+			System.out.println("");
+		}
+		System.out.println("Deck:");
+		deck.display();
+		System.out.println("");
+		
+		System.out.println("Discard:");
+		deck.displayDiscard();
+		System.out.println("");
+		
+	}
 
 }

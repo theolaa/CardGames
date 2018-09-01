@@ -24,6 +24,19 @@ public class Deck {
 		
 	}
 	
+	public Card drawRandom() {
+		Card temp;
+		
+		int rand = (int)(Math.random() * ((cards.size()-1) + 1));
+		
+		temp = cards.get(rand);
+		
+		cards.remove(rand);
+		
+		return temp;
+		
+	}
+	
 	public void addToDiscard(Card card) {
 		
 		discardPile.add(card);

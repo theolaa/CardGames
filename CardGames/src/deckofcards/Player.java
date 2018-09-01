@@ -36,6 +36,7 @@ public class Player {
 		}
 		for (Card temp : hand)
 			System.out.println(temp.getCardName());
+		System.out.println("("+ hand.size() + " cards total)");
 	}
 	
 	public String getName() {

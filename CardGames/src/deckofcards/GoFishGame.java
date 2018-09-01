@@ -2,7 +2,7 @@ package deckofcards;
 
 import java.util.ArrayList;
 
-public class GoFishGame extends CardGame{
+public class GoFishGame extends CardGame {
 	
 	Deck deck = new Deck(buildDeck(1));
 	
@@ -28,13 +28,7 @@ public class GoFishGame extends CardGame{
 			}
 		}
 		
-		for (Player temp : players) {
-			System.out.println(temp.getName());
-			temp.displayHand();
-			System.out.println("");
-		}
-		System.out.println("Deck:");
-		deck.display();
+		displayGameState(deck, players);
 		
 	}
 	
