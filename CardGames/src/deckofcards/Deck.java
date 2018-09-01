@@ -3,15 +3,18 @@ package deckofcards;
 import java.util.ArrayList;
 
 public class Deck {
+	// Private array lists to hold the cards in the deck and in the discard pile.
 	private ArrayList<Card> cards;
 	private ArrayList<Card> discardPile;
 	
+	// A deck needs to be initialzed with an arraylist of cards.
 	public Deck (ArrayList<Card> temp) {
 		cards = temp;
-		 discardPile = new ArrayList<Card>();
-		 shuffle();
+		discardPile = new ArrayList<Card>();
+		shuffle();
 	}
 	
+	// Returns the first card in the deck. This is the "Top" of the deck for our purposes.
 	public Card drawTop() {
 		
 		Card temp;
@@ -24,6 +27,7 @@ public class Deck {
 		
 	}
 	
+	// Returns a random card from the deck. 
 	public Card drawRandom() {
 		Card temp;
 		
@@ -37,12 +41,14 @@ public class Deck {
 		
 	}
 	
+	// Adds the specified card to the discard pile.
 	public void addToDiscard(Card card) {
 		
 		discardPile.add(card);
 		
 	}
 	
+	// Shuffles the deck, minus the discard file.
 	public void shuffle() {
 		ArrayList<Card> tempCards = new ArrayList<Card>();
 		
@@ -57,6 +63,7 @@ public class Deck {
 		
 	}
 	
+	// Displays the cards in the deck
 	public void display() {
 		
 		for (Card temp : cards) {
@@ -65,6 +72,7 @@ public class Deck {
 		System.out.println("(" + cards.size() + " cards total)");
 	}
 	
+	// Displays the cards in the discard pile.
 	public void displayDiscard() {
 		
 		for (Card temp : discardPile) {

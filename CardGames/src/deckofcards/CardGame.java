@@ -2,8 +2,12 @@ package deckofcards;
 
 import java.util.ArrayList;
 
+// A "template" of sorts for all different kinds of card games. 
+// Should hold some features that are pretty much universal to all card games.
 public abstract class CardGame {
 
+	// Generates an arraylist of playing cards to instantiate a deck with.
+	// Can have more than one standard playing deck's worth of cards.
 	public ArrayList<Card> buildDeck(int noOfDecks) {
 		if (noOfDecks < 1)
 			noOfDecks = 1;
@@ -30,6 +34,7 @@ public abstract class CardGame {
 
 	}
 	
+	// Displays all players' hands, the deck, and the discard pile.
 	public void displayGameState(Deck deck, ArrayList<Player> players) {
 		
 		for (Player temp : players) {
@@ -37,6 +42,7 @@ public abstract class CardGame {
 			temp.displayHand();
 			System.out.println("");
 		}
+		
 		System.out.println("Deck:");
 		deck.display();
 		System.out.println("");
