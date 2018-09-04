@@ -49,6 +49,14 @@ public class Player {
 		System.out.println("("+ hand.size() + " cards total)");
 	}
 	
+	// Returns true if this player has a card with the specified value
+	public boolean hasCardWithValue(int i) {
+		for (Card temp : hand) {
+			if (temp.getValue() == i) return true;
+		}
+		return false;
+	}
+	
 	// Gets the player's name
 	public String getName() {
 		return this.name;

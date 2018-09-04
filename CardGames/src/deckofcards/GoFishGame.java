@@ -13,10 +13,6 @@ public class GoFishGame extends CardGame {
 		// Get number of players and instantiate them here
 		players.add(new Player("Player 1"));
 		players.add(new Player("Player 2"));
-		players.add(new Player("Player 3"));
-		players.add(new Player("Player 4"));
-		players.add(new Player("Player 5"));
-		players.add(new Player("Player 6"));
 		
 		int startingHandSize = 7;
 		
